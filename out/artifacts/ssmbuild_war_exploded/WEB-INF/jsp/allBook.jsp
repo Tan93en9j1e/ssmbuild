@@ -1,13 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: tmj
-  Date: 2026/5/8
-  Time: 15:33
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
 <html>
 <head>
     <title>书籍展示</title>
@@ -24,6 +16,11 @@
                 <h1>
                     <small>书籍列表 —— 显示所有书籍</small>
                 </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 column">
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增书籍</a>
             </div>
         </div>
     </div>
@@ -46,10 +43,6 @@
                             <td>${book.bookName}</td>
                             <td>${book.bookCounts}</td>
                             <td>${book.detail}</td>
-                            <td>
-                                <button class="btn btn-sm btn-primary">编辑</button>
-                                <button class="btn btn-sm btn-danger">删除</button>
-                            </td>
                         </tr>
                     </c:forEach>
                 </tbody>
