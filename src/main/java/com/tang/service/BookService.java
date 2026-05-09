@@ -25,4 +25,6 @@ public interface BookService {
     Books queryBookById(int id);
 
     List<Books> queryAllBook();
+
+    Books queryBookByName(String bookName);
 }

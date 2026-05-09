@@ -28,9 +28,9 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>
-<!--    配置dao 扫描包-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
-<!--        注入SQLSessionFactory-->
+    <!--    配置dao 扫描包-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--        注入SQLSessionFactory-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage" value="com.tang.dao"/>
     </bean>
