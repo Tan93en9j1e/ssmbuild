@@ -18,7 +18,7 @@ public interface BookMapper {
     //增删改查
     int addBook(Books books);
 
-    int deleteBookById( int id);
+    int deleteBookById(int id);
 
     int updateBook(Books books);
 

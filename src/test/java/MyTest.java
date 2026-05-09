@@ -15,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MyTest {
     @Test
-    public void test1(){
+    public void test1() {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         BookService bookService = (BookService) context.getBean("BookServiceImpl");
         for (Books books : bookService.queryAllBook()) {

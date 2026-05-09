@@ -28,44 +28,49 @@ public class BookController {
     //controller调service层
     @Autowired
     @Qualifier("BookServiceImpl")
-    private BookService bookService=new BookServiceImpl();
+    private BookService bookService = new BookServiceImpl();
 
     //查询全部的书籍，并且返回到一个书籍展示页面
     @RequestMapping("/allBook")
-    public String list(Model model){
+    public String list(Model model) {
         List<Books> list = bookService.queryAllBook();
         model.addAttribute("list", list);
         return "allBook";
     }
+
     //跳转到添加书籍页面
     @RequestMapping("/toAddBook")
-    public String toAddPaper(){
+    public String toAddPaper() {
         return "addBook";
     }
+
     //添加书籍的请求
     @RequestMapping("/addBook")
-    public String addBook(Books books){
-        System.out.println("addBook=>"+books);
+    public String addBook(Books books) {
+        System.out.println("addBook=>" + books);
         bookService.addBook(books);
         return "redirect:/book/allBook";//重定向到allBook页面
     }
+
     //跳转到修改书籍页面
     @RequestMapping("/toUpdate")
-    public String toUpdateBook( int id, Model model){
+    public String toUpdateBook(int id, Model model) {
         Books books = bookService.queryBookById(id);
         model.addAttribute("books", books);
         return "updateBook";
     }
+
     //修改书籍
     @RequestMapping("/updateBook")
-    public String updateBook(Books books){
-        System.out.println("updateBook=>"+books);
+    public String updateBook(Books books) {
+        System.out.println("updateBook=>" + books);
         bookService.updateBook(books);
         return "redirect:/book/allBook";
     }
+
     //删除书籍
     @RequestMapping("/deleteBook/{bookId}")
-    public String deleteBook(@PathVariable("bookId") int id){
+    public String deleteBook(@PathVariable("bookId") int id) {
         bookService.deleteBookById(id);
         return "redirect:/book/allBook";
     }

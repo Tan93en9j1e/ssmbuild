@@ -13,7 +13,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-<!--    依赖 junit,数据库驱动，连接池，servlet,jsp,mybatis,mybatis-spring,spring-->
+    <!--    依赖 junit,数据库驱动，连接池，servlet,jsp,mybatis,mybatis-spring,spring-->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -88,7 +88,7 @@
             <version>1.18.42</version>
         </dependency>
     </dependencies>
-<!--静态资源导出问题-->
+    <!--静态资源导出问题-->
     <build>
         <plugins>
             <plugin>

@@ -38,7 +38,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public int updateBook(Books books) {
-        System.out.println("BookServiceImpl:updateBook=>"+books);
+        System.out.println("BookServiceImpl:updateBook=>" + books);
         return bookMapper.updateBook(books);
     }
 

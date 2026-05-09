@@ -4,13 +4,14 @@
 <head>
     <title>书籍展示</title>
     <%--Bootstrap--%>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="<KEY>" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="<KEY>" crossorigin="anonymous">
 
 </head>
 <body>
 
 <div class="container">
-    <div class = "row clearfix">
+    <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
@@ -38,19 +39,19 @@
                 </thead>
 
                 <tbody>
-                    <c:forEach var="book" items="${list}">
-                        <tr>
-                            <td>${book.bookID}</td>
-                            <td>${book.bookName}</td>
-                            <td>${book.bookCounts}</td>
-                            <td>${book.detail}</td>
-                        </tr>
-                        <td>
-                            <a href="${pageContext.request.contextPath}/book/toUpdate?id=${book.bookID}">修改</a>
-                            &nbsp;|&nbsp;
-                            <a href="${pageContext.request.contextPath}/book/deleteBook/${book.bookID}">删除</a>
-                        </td>
-                    </c:forEach>
+                <c:forEach var="book" items="${list}">
+                    <tr>
+                        <td>${book.bookID}</td>
+                        <td>${book.bookName}</td>
+                        <td>${book.bookCounts}</td>
+                        <td>${book.detail}</td>
+                    </tr>
+                    <td>
+                        <a href="${pageContext.request.contextPath}/book/toUpdate?id=${book.bookID}">修改</a>
+                        &nbsp;|&nbsp;
+                        <a href="${pageContext.request.contextPath}/book/deleteBook/${book.bookID}">删除</a>
+                    </td>
+                </c:forEach>
                 </tbody>
             </table>
         </div>

@@ -22,7 +22,7 @@ public interface BookService {
 
     int updateBook(Books books);
 
-    Books queryBookById( int id);
+    Books queryBookById(int id);
 
     List<Books> queryAllBook();
 }
