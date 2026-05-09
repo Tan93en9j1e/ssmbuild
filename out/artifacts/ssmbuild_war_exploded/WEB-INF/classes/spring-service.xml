@@ -24,11 +24,11 @@
         <!--        注入数据源-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
-<!--    aop事务支持-->
+    <!--    aop事务支持-->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
-            <tx:attributes>
-                <tx:method name="*" propagation="REQUIRED"/>
-            </tx:attributes>
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
     </tx:advice>
 
     <aop:config>
