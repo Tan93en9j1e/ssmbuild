@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>书籍展示</title>
+    <title>新增书籍</title>
     <%--Bootstrap--%>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
           integrity="<KEY>" crossorigin="anonymous">

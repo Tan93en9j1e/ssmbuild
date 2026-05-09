@@ -18,11 +18,11 @@ public interface BookMapper {
     //增删改查
     int addBook(Books books);
 
-    int deleteBookById(@Param("bookId") int id);
+    int deleteBookById( int id);
 
     int updateBook(Books books);
 
-    Books queryBookById(@Param("bookId") int id);
+    Books queryBookById(int id);
 
     List<Books> queryAllBook();
 }

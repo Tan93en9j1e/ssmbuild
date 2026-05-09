@@ -78,6 +78,11 @@
             <version>6.2.8</version>
         </dependency>
         <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.25.1</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.42</version>
@@ -85,6 +90,18 @@
     </dependencies>
 <!--静态资源导出问题-->
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                    <parameters>true</parameters>
+                </configuration>
+            </plugin>
+        </plugins>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
