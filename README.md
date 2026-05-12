@@ -15,6 +15,7 @@ SSM（Spring + SpringMVC + MyBatis）框架整合入门项目，以图书管理�
 - 数据库：MySQL（推荐，可适配其他关系型数据库）
 📂 项目结构
 项目目录结构清晰，符合SSM项目规范，各目录功能如下：
+```
 ssmbuild/
 ├── .idea/                 # IntelliJ IDEA 配置文件目录（IDE自动生成）
 ├── out/                   # 项目编译输出目录（含war包解压文件）
@@ -29,6 +30,7 @@ ssmbuild/
 │   └── static/            # 静态资源（CSS、JS、图片，可自行补充）
 ├── .gitignore             # Git忽略文件（指定无需提交的文件/目录）
 └── pom.xml                # Maven核心配置文件（依赖管理、构建配置）
+```
 📌 核心功能模块
 以图书管理为核心，实现完整的基础业务操作，贴合SSM框架学习需求：
 - 图书信息展示：分页/列表展示所有图书信息
@@ -47,6 +49,7 @@ git clone https://github.com/Tan93en9j1e/ssmbuild.git
 3. 配置数据库
 1. 新建MySQL数据库（推荐数据库名：ssmbuild）
 2. 执行以下SQL语句创建图书表（book）：
+```mysql
 CREATE DATABASE IF NOT EXISTS ssmbuild;
 USE ssmbuild;
 
@@ -59,11 +62,14 @@ CREATE TABLE IF NOT EXISTS book (
     create_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书表';
+```
 3. 修改项目中MyBatis数据库配置文件（src/main/resources/mybatis-config.xml 或 spring-dao.xml），替换为自己的数据库地址、用户名和密码：
+```
 <property name="url" value="jdbc:mysql://localhost:3306/ssmbuild?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC"/>
 <property name="username" value="root"/>
 <property name="password" value="你的数据库密码"/>
-4. 启动项目
+```
+5. 启动项目
 - 用IntelliJ IDEA打开项目，等待Maven自动下载依赖（若依赖下载失败，可刷新Maven配置）
 - 配置Tomcat服务器，将项目部署到Tomcat中
 - 启动Tomcat，访问地址：http://localhost:8080/ssmbuild（端口号根据自己的Tomcat配置调整）
