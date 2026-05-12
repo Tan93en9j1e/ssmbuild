@@ -45,7 +45,9 @@ ssmbuild/
 - Tomcat 8.5+
 - MySQL 8.0+（或5.7）
 2. 克隆项目
+```
 git clone https://github.com/Tan93en9j1e/ssmbuild.git
+```
 3. 配置数据库
 1. 新建MySQL数据库（推荐数据库名：ssmbuild）
 2. 执行以下SQL语句创建图书表（book）：
@@ -72,12 +74,12 @@ CREATE TABLE IF NOT EXISTS book (
 5. 启动项目
 - 用IntelliJ IDEA打开项目，等待Maven自动下载依赖（若依赖下载失败，可刷新Maven配置）
 - 配置Tomcat服务器，将项目部署到Tomcat中
-- 启动Tomcat，访问地址：http://localhost:8080/ssmbuild（端口号根据自己的Tomcat配置调整）
+- 启动Tomcat，访问地址：`http://localhost:8080/ssmbuild`（端口号根据自己的Tomcat配置调整）
 📝 提交记录说明
 项目提交记录清晰，便于追溯功能开发历程：
-- feat(project): 初始化SSM项目架构 - 搭建项目基础结构，整合SSM框架核心配置
-- feat(jsp): 完善图书管理界面功能 - 开发JSP前端页面，实现图书管理界面交互
-- style(frontend): 格式化JSP页面代码样式和注释 - 优化JSP代码格式，添加规范注释，提升可读性
+- `feat(project)`: 初始化SSM项目架构 - 搭建项目基础结构，整合SSM框架核心配置
+- `feat(jsp)`: 完善图书管理界面功能 - 开发JSP前端页面，实现图书管理界面交互
+- `style(frontend)`: 格式化JSP页面代码样式和注释 - 优化JSP代码格式，添加规范注释，提升可读性
 💡 适用场景
 - SSM框架入门学习者，用于熟悉Spring、SpringMVC、MyBatis的整合流程
 - Java Web初学者，学习分层开发（MVC、三层架构）思想
